@@ -43,7 +43,7 @@ class Skill {
     });
     // TODO 通过canvas将技能名称、图标、描述、快捷键等显示出来
     const keyName = typeof this.keyCode === 'number' ? String.fromCharCode(this.keyCode) : this.keyCode.map(key => String.fromCharCode(key)).join('/');
-    console.log(`cxk已加载技能：${keyName}-${this.name}`);
+    console.log(`夏鸡蛋已加载技能：${keyName}-${this.name}`);
   }
 
   /**
@@ -58,7 +58,7 @@ class Skill {
     this.lastCastTime = Date.now(); // 更新上次释放时间
     this.main.score.allScore -= this.cost;  // 扣除积分
     // TODO 显示释放技能的特效
-    console.log(`cxk消耗了${this.cost}积分发动了技能——${this.name}！\n${this.desc}`)
+    console.log(`夏鸡蛋消耗了${this.cost}积分发动了技能——${this.name}！\n${this.desc}`)
   }
 }
 
@@ -67,7 +67,7 @@ class SkillQ extends Skill {
     super(main,
       '意念控球',
       '',
-      'cxk使用意念控制球转向一次，直接命中最近的一个砖块',
+      '夏鸡蛋使用意念控制球转向一次，直接命中最近的一个砖块',
       10,
       1000,
       'Q');
@@ -109,9 +109,9 @@ class SkillQ extends Skill {
 class SkillW extends Skill {
   constructor(main) {
     super(main,
-      '虚鲲鬼步',
+      '浑蛋鬼步',
       '',
-      'cxk发动在美国校队时领悟的绝技，5秒内可以100%接住篮球',
+      '夏源发动在瘦肉中学领悟的绝技，5秒内可以100%接住鸡蛋',
       10,
       1000,
       'W');
